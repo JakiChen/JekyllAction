@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>dactl </title>
+<!---->
+<meta name="description" content="this should contain a proper description
+">
+<link rel="canonical" href="/">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Blog" />
+<meta name="twitter:description" content="this should contain a proper description
+" />
+<meta name="twitter:image" content="" />
+<meta name="author" content="">
+<link rel="author" href="">
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blog">
+<meta property="og:description" content="this should contain a proper description
+">
+<meta property="og:url" content="/">
+<meta property="og:site_name" content="dactl">
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,400italic,700,700italic">
+<style>
+    html {
+      font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+</style>
+<link rel="stylesheet" href="/assets/css/bf.css">
+   <body>
+       <div class="wrapper" id="blep">
+          <header>
+   <div class="menu">
+     <div class="logo">
+        <a href="/">dactl</a>
+        <object type="image/svg+xml" data="/assets/img/dactl.svg" class="logosvg">Your browser does not support svg images</object>
+     </div>
+       <ul>
+           <li><a href="/about">about</a>
+           <li><a href="/archive">archive</a>
+       </ul>
+   </div>
+   <div class="social">
+     <ul>
+       <li>
+            <a href="https://youtube.com/youtube-user-name" target="_blank" class="smaller">
+              <span class="icon-youtube"></span>
+            </a>
+       <li>
+            <a href="https://stackoverflow.com/stackoverflow-user-name" target="_blank" class="smaller">
+              <span class="icon-stackoverflow"></span>
+            </a>
+       <li>
+            <a href="https://twitter.com/twitter-user-name" target="_blank" class="smaller">
+              <span class="icon-twitter"></span>
+            </a>
+       <li>
+            <a href="https://github.com/github-user-name" target="_blank" class="smaller">
+              <span class="icon-github"></span>
+            </a>
+       <li>
+            <a href="mailto:your@email.com" target="_blank">
+              <span class="icon-mail_outline"></span>
+            </a>
+       <li>
+            <a href="/feed.xml" target="_blank">
+                <span class="icon-rss_feed"></span>
+            </a>
+       <li>
+            <a href="#" onclick="switchTheme()" title="Switch theme?">
+              <span class="icon-invert_colors" id="theme-switcher"></span>
+            </a>
+     </ul>
+   </div>
+</header>
+<article class="blog">
+<style>
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC {
+    margin-bottom: 2em;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC::before {
+    background-image: url('https://source.unsplash.com/collection/430471/');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,0,100,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-container,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-container::before,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-container::after {
+    height: 25rem;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-bleed-container,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-bleed-container::before,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-container,
+        .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-container::before,
+        .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="
+    post-title-container
+        welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-container hero-hov
+  ">
+   <div class="heading-container hero-heading hero-heading-blog">
+     <h1>
+          <a href="/posts/welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC" title="Welcome to dactl!">Welcome to dactl!</a>
+     </h1>
+     <div class="
+        post-meta
+      ">
+        <span>22/03/2017</span>
+        <span>
+              <a href="/tag/dactl">#dactl</a>
+              <a href="/tag/jekyll">#jekyll</a>
+        </span>
+     </div>
+   </div>
+ </div>
+     <p class="lead">You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>.
+       <div class="readmore">
+          <a href="/posts/welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC" role="button">Read more</a>
+       <div>
+</article>
+ <hr>
+<article class="blog">
+<style>
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-9 {
+    margin-bottom: 2em;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-9::before {
+    background-image: url('https://source.unsplash.com/collection/430471/');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-9::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,0,100,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-9-container,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-9-container::before,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-9-container::after {
+    height: 25rem;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-9-bleed-container,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-9-bleed-container::before,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-9-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-9-container,
+        .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-9-container::before,
+        .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-9-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="
+    post-title-container
+        welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-9 welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-9-container hero-hov
+  ">
+   <div class="heading-container hero-heading hero-heading-blog">
+     <h1>
+          <a href="/posts/welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-9" title="Welcome to dactl!">Welcome to dactl!</a>
+     </h1>
+     <div class="
+        post-meta
+      ">
+        <span>22/03/2017</span>
+        <span>
+              <a href="/tag/dactl">#dactl</a>
+              <a href="/tag/jekyll">#jekyll</a>
+        </span>
+     </div>
+   </div>
+ </div>
+     <p class="lead">You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>.
+       <div class="readmore">
+          <a href="/posts/welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-9" role="button">Read more</a>
+       <div>
+</article>
+ <hr>
+<article class="blog">
+<style>
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-8 {
+    margin-bottom: 2em;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-8::before {
+    background-image: url('https://source.unsplash.com/collection/430471/');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-8::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,0,100,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-8-container,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-8-container::before,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-8-container::after {
+    height: 25rem;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-8-bleed-container,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-8-bleed-container::before,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-8-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-8-container,
+        .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-8-container::before,
+        .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-8-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="
+    post-title-container
+        welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-8 welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-8-container hero-hov
+  ">
+   <div class="heading-container hero-heading hero-heading-blog">
+     <h1>
+          <a href="/posts/welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-8" title="Welcome to dactl!">Welcome to dactl!</a>
+     </h1>
+     <div class="
+        post-meta
+      ">
+        <span>22/03/2017</span>
+        <span>
+              <a href="/tag/dactl">#dactl</a>
+              <a href="/tag/jekyll">#jekyll</a>
+        </span>
+     </div>
+   </div>
+ </div>
+     <p class="lead">You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>.
+       <div class="readmore">
+          <a href="/posts/welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-8" role="button">Read more</a>
+       <div>
+</article>
+ <hr>
+<article class="blog">
+<style>
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-7 {
+    margin-bottom: 2em;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-7::before {
+    background-image: url('https://source.unsplash.com/collection/430471/');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-7::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,0,100,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-7-container,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-7-container::before,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-7-container::after {
+    height: 25rem;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-7-bleed-container,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-7-bleed-container::before,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-7-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-7-container,
+        .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-7-container::before,
+        .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-7-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="
+    post-title-container
+        welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-7 welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-7-container hero-hov
+  ">
+   <div class="heading-container hero-heading hero-heading-blog">
+     <h1>
+          <a href="/posts/welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-7" title="Welcome to dactl!">Welcome to dactl!</a>
+     </h1>
+     <div class="
+        post-meta
+      ">
+        <span>22/03/2017</span>
+        <span>
+              <a href="/tag/dactl">#dactl</a>
+              <a href="/tag/jekyll">#jekyll</a>
+        </span>
+     </div>
+   </div>
+ </div>
+     <p class="lead">You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>.
+       <div class="readmore">
+          <a href="/posts/welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-7" role="button">Read more</a>
+       <div>
+</article>
+ <hr>
+<article class="blog">
+<style>
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-6 {
+    margin-bottom: 2em;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-6::before {
+    background-image: url('https://source.unsplash.com/collection/430471/');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-6::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,0,100,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-6-container,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-6-container::before,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-6-container::after {
+    height: 25rem;
+  }
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-6-bleed-container,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-6-bleed-container::before,
+  .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-6-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-6-container,
+        .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-6-container::before,
+        .welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-6-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="
+    post-title-container
+        welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-6 welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-6-container hero-hov
+  ">
+   <div class="heading-container hero-heading hero-heading-blog">
+     <h1>
+          <a href="/posts/welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-6" title="Welcome to dactl!">Welcome to dactl!</a>
+     </h1>
+     <div class="
+        post-meta
+      ">
+        <span>22/03/2017</span>
+        <span>
+              <a href="/tag/dactl">#dactl</a>
+              <a href="/tag/jekyll">#jekyll</a>
+        </span>
+     </div>
+   </div>
+ </div>
+     <p class="lead">You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>.
+       <div class="readmore">
+          <a href="/posts/welcome-to-dactl%E7%9A%84%E5%89%AF%E6%9C%AC-6" role="button">Read more</a>
+       <div>
+</article>
+<nav class="pagination" role="navigation">
+   <hr/>
+   <ul>
+       <li class="pagination-item-prev" >
+            <span>&laquo; Previous</span> 
+       <li class="pagination-item-next" >
+            <a rel="next" href="/articles/page-2/">Next &raquo;</a> 
+   </ul>
+   <hr/>
+</nav>
+           <footer>
+    <span>this should contain a proper description
+</span>
+    <span>written by Your Name</span>
+</footer>
+       </div>
+<script type="text/javascript" src="/assets/js/theme.js"></script>
+<script type="text/javascript" src="/assets/js/barefoot.js"></script>
+    
